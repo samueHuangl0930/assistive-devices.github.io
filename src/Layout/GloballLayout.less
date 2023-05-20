@@ -1,0 +1,189 @@
+@import url('../assets/style/theme.less');
+
+/* 全域樣式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Microsoft JhengHei', 'Arial';
+    // font-weight: 500;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 0;
+}
+
+h1 {
+    font-size: 1.875rem;
+}
+
+.show {
+    display: block;
+    width: 50px;
+    // color: @bottom-color;
+}
+
+.hide {
+    display: none;
+}
+
+/* 佈局樣式 */
+html,
+body {
+    min-height: 100%;
+    font-size: 1rem;
+}
+
+
+.ant-layout {
+    height: 100%;
+
+}
+
+
+
+#global {
+    width: 100%;
+    height: 100%;
+
+    /* header */
+    .site-layout {
+        .ant-layout-header {
+            height: 70px;
+            background-color: @main-color;
+            display: flex;
+            align-items: center;
+            padding: 0 10px;
+
+
+
+            header {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                position: relative;
+
+                .header-right {
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: row;
+                    position: absolute;
+                    left: 0;
+
+                    .anticon {
+                        width: 35px;
+                        margin: 0px 5px;
+
+                        svg {
+                            width: 100%;
+                        }
+                    }
+
+                    .logo {
+                        height: 100%;
+                        width: auto;
+                        margin-left: 10px;
+
+                        img {
+                            height: 100%;
+                            vertical-align: inherit;
+
+                        }
+                    }
+                }
+
+                .employee {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    position: absolute;
+                    right: 0;
+
+                    img {
+                        border-radius: 5px;
+                        object-fit: contain;
+                    }
+
+                    p {
+                        font-weight: 900;
+                        margin: 0px;
+                        height: 20px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: left;
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+
+
+    }
+
+
+    /* sider*/
+    .ant-layout-sider-children {
+
+        background-color: @main-color;
+
+        .ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item-selected {
+            background-color: @Secondary-color ;
+            color: #F6F4F5;
+            font-weight: 900;
+            font-size: 20px;
+        }
+
+        .ant-menu.ant-menu-dark,
+        .ant-menu-dark .ant-menu-sub,
+        .ant-menu.ant-menu-dark .ant-menu-sub {
+            color: rgba(255, 255, 255, 0.65);
+            background-color: @main-color;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ant-menu-item {
+            margin: 0px !important;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            color: @fontcolor-dark;
+
+            a {
+                margin: 0px !important;
+                height: 70px;
+                display: flex;
+                align-items: center;
+                font-size: 18px;
+                color: @fontcolor-dark;
+            }
+
+
+            svg {
+                width: 15px;
+            }
+        }
+
+        .logout {
+            position: absolute;
+            bottom: 0;
+        }
+    }
+
+    /* content*/
+    .ant-layout-conten {
+        height: 100%;
+        flex: initial;
+    }
+}

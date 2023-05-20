@@ -1,0 +1,142 @@
+@import url("../../assets/style/theme.less");
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+#Sale {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    nav {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        min-height: 70px;
+
+        .ant-radio-button-wrapper {
+            background-color: @Secondary-color;
+
+            &:first-child {
+                border-radius: 5px 0 0 5px;
+            }
+
+            &:last-child {
+                border-radius: 0 5px 5px 0;
+            }
+
+            &:hover {
+                color: @fontcolor-white;
+            }
+
+            span {
+                font-size: 20px;
+                font-weight: 900;
+            }
+        }
+
+        .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):focus-within {
+            box-shadow: 0 0 0 3px#5a5b5a57;
+        }
+
+        .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+            z-index: 1;
+            color: white;
+            background: @Secondary-color ;
+            border-color: #5a5b5a6e;
+        }
+
+        .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled)::before {
+            background-color: #5a5b5a6e;
+        }
+
+        .ant-btn {
+            height: 32px;
+            display: flex;
+            align-items: center;
+            background-color: @Secondary-color;
+            border-radius: 5px;
+
+            &:active {
+                color: black;
+                border-color: #5a5b5a6e;
+            }
+
+            &:hover {
+                color: @fontcolor-white ;
+                border-color: #5a5b5a07;
+            }
+
+            &:focus {
+                color: @fontcolor-white ;
+                border-color: #5a5b5a07;
+            }
+
+            span {
+                font-size: 20px;
+                font-weight: 900;
+            }
+        }
+
+        .time {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 40%;
+
+            .ant-space-vertical {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+        }
+    }
+
+    .contain {
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        // border: red 2px solid;
+
+        .ant-table-wrapper {
+            width: 100%;
+
+            .ant-spin-nested-loading {
+                height: 100%;
+
+                .ant-spin-container {
+                    height: 100% !important;
+
+                    .ant-table {
+                        height: 90%;
+
+
+                    }
+
+                    .ant-table-thead>tr>th {
+                        font-size: 20px;
+                        font-weight: 600;
+                    }
+
+                    .ant-table-tbody > tr > td  {
+                        font-size: 18px;
+                        font-weight: 500;
+                    }
+
+                    .ant-table-pagination.ant-pagination {
+                        height: 10%;
+                        margin: 0px;
+                        padding: 0 15px;
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+            }
+
+
+        }
+
+
+    }
+
+
+}
